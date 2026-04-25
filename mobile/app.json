@@ -12,7 +12,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#0A0A0A"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.turnio.app",
@@ -26,7 +28,12 @@
         "backgroundColor": "#0A0A0A"
       },
       "package": "com.turnio.app",
-      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -43,7 +50,13 @@
       ]
     ],
     "extra": {
-      "router": { "origin": false }
-    }
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "02ee93a1-89d0-4e32-b266-b44f00a874b0"
+      }
+    },
+    "owner": "tuturnoya2026"
   }
 }

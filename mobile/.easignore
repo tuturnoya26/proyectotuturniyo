@@ -1,0 +1,9 @@
+*.log
+*.png
+*.jpg
+*.jpeg
+*.apk
+Expo-Go-*.apk
+turnio-*.apk
+node_modules
+.expo
