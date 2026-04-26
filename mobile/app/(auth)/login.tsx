@@ -17,17 +17,16 @@ import type { UserRole } from '@/types/database';
 import { APP_LOGO_URL, APP_NAME } from '@/constants/brand';
 
 export default function Login() {
-  const { signInWithGoogle, updateRole, session } = useAuth();
+  const { signInWithGoogle } = useAuth();
   const [role, setRole] = useState<UserRole>('client');
   const [loading, setLoading] = useState(false);
 
   async function handleGoogleLogin() {
     try {
       setLoading(true);
-      await signInWithGoogle();
-      await updateRole(role);
+      await signInWithGoogle(role);
     } catch (e: any) {
-      Alert.alert('Error', e.message ?? 'No se pudo iniciar sesión');
+      Alert.alert('Error', e.message ?? 'No se pudo iniciar sesion');
     } finally {
       setLoading(false);
     }
@@ -47,7 +46,7 @@ export default function Login() {
 
       <Text style={styles.brandName}>{APP_NAME}</Text>
       <Text style={styles.title}>Bienvenido a {APP_NAME}</Text>
-      <Text style={styles.subtitle}>Elegí tu perfil para empezar</Text>
+      <Text style={styles.subtitle}>Elegi tu perfil para empezar</Text>
 
       <View style={styles.roleGrid}>
         <TouchableOpacity
@@ -65,9 +64,7 @@ export default function Login() {
           <Text style={[styles.roleTitle, role === 'client' && styles.roleTitleActive]}>
             Soy cliente
           </Text>
-          <Text
-            style={[styles.roleDesc, role === 'client' && styles.roleDescActive]}
-          >
+          <Text style={[styles.roleDesc, role === 'client' && styles.roleDescActive]}>
             Quiero reservar turnos
           </Text>
         </TouchableOpacity>
@@ -87,9 +84,7 @@ export default function Login() {
           <Text style={[styles.roleTitle, role === 'owner' && styles.roleTitleActive]}>
             Tengo un local
           </Text>
-          <Text
-            style={[styles.roleDesc, role === 'owner' && styles.roleDescActive]}
-          >
+          <Text style={[styles.roleDesc, role === 'owner' && styles.roleDescActive]}>
             Quiero recibir reservas
           </Text>
         </TouchableOpacity>
@@ -110,8 +105,7 @@ export default function Login() {
       </View>
 
       <Text style={styles.legal}>
-        Al continuar aceptás nuestros Términos y Condiciones y la Política de
-        Privacidad.
+        Al continuar aceptas nuestros Terminos y Condiciones y la Politica de Privacidad.
       </Text>
     </ScrollView>
   );
