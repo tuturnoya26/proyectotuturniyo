@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TU TURNO YA — Reservá turnos en peluquerías y barberías</title>
+  <meta name="description" content="Reservá turnos en peluquerías, barberías y locales de belleza cerca tuyo en segundos. Para clientes y dueños de locales." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0A0A0A;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      text-align: center;
+      background: radial-gradient(circle at 30% 50%, rgba(14,165,233,0.18) 0%, rgba(10,10,10,1) 70%);
+    }
+    h1 {
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .accent { color: #0EA5E9; }
+    .tagline {
+      font-size: 22px;
+      color: #94A3B8;
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.4;
+    }
+    .features {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .feature {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(14,165,233,0.25);
+      border-radius: 16px;
+      padding: 20px 28px;
+      max-width: 240px;
+    }
+    .feature-title { font-weight: 700; margin-bottom: 6px; color: #0EA5E9; font-size: 15px; }
+    .feature-text { font-size: 14px; color: #cbd5e1; line-height: 1.5; }
+    .links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .links a {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.3);
+      transition: all 0.2s;
+    }
+    .links a:hover { background: rgba(14,165,233,0.15); color: #0EA5E9; border-color: #0EA5E9; }
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #64748b;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .tagline { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <h1>TU <span class="accent">TURNO</span> YA</h1>
+    <p class="tagline">Reservá turnos en peluquerías y barberías cerca tuyo, en segundos.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-title">Para clientes</div>
+        <div class="feature-text">Encontrá los mejores locales, reservá y pagá online sin llamar.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Para dueños</div>
+        <div class="feature-text">Gestioná tu agenda, equipo, productos y caja desde el celular.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">7 días gratis</div>
+        <div class="feature-text">Probá todas las funciones sin pagar. Después activás VIP solo si querés.</div>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="privacy.html">Política de privacidad</a>
+      <a href="terms.html">Términos y condiciones</a>
+      <a href="https://wa.me/5492224412241">Soporte WhatsApp</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 TU TURNO YA — Buenos Aires, Argentina
+  </footer>
+</body>
+</html>
